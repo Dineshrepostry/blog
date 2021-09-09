@@ -1,0 +1,202 @@
+@keyframes first-time{
+    0% { opacity:0;position:relative;top:200px; }
+    50% {opacity:1;position:relative;top:200px; }
+    100%  { opacity: 1;
+        position:relative;
+        
+        top:0px;} 
+}
+@keyframes ptag {
+    0% {opacity:0;}
+    20% {opacity:0;}
+    50% {opacity:0;backdrop-filter: blur(10px);}
+    70% {opacity:0;backdrop-filter: blur(10px);}
+    100% {opacity: 1;backdrop-filter: blur(10px);}
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: white;
+}
+.inner{
+    height: 25vh;
+    width:100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    scroll-snap-align: start;
+}
+.intro{
+    height: 100vh;;
+    background-image:url("intro.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    scroll-snap-align: start;
+    
+    
+    
+}
+.head{
+    color: black;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro-text{
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    transition:0.5s
+}
+.intro-text:hover{
+    color:black;
+    font-weight: bold;
+    transition:0.5s
+}
+
+.intro-text1{
+    text-shadow: 2px 2px #FF0000;
+    font-weight: bolder;
+    transition:0.5s
+}
+.intro-text1:hover{
+    color:red;
+    font-weight: bolder;
+    transition:0.5s
+}
+.cathedral,.foreground,.pantheon-complex,.university-of-madras, .pwd{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;   
+}
+.cathedral{
+    background-image: url("madras/cathedral.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    scroll-snap-align: start;
+}
+
+.ceg{
+    background-image: url("madras/ceg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+}
+.pantheon-complex{
+    background-image: url("madras/pantheon-complex.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+}
+.heading{
+    /* animation-name: first-time;
+    animation-duration: 5s; */
+    width:100vw;
+    text-align: center;
+    font-size: 20px;
+    font-family: Papyrus;
+}
+.heading-pc{
+    width:100vw;
+    text-align: center;
+    font-size: 20px;
+    font-family: Papyrus;
+}
+.university-of-madras{
+    background-image: url("madras/u-f-m.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+p{
+    /* animation-name: first-time;
+    animation-duration: 10s; */
+    text-align: justify;
+    padding:5px;
+    z-index: 2;
+    width:60%;
+    font-size: 15px;
+    font-weight: 700;
+    
+}
+.heading-u-f-m{
+   
+    text-shadow: 4px 4px black;    
+    width:100vw;
+    text-align: center;
+    font-size: 20px;
+    font-family: Papyrus;
+}
+.pwd{
+    background-image: url("madras/pwd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;  
+}
+/* .foreground{
+     backdrop-filter: blur(10px);
+} */
+
+
+.heading.reveal,.foreground.reveal{
+    position: relative;
+     /* transform: translateY(150px);  */
+     /* opacity: 0; */
+     /* transition: all 2s ease; */
+     /* animation-name: first-time;
+    animation-duration: 5s; */
+  }
+  p.reveal{
+
+    position: relative;
+    transition:2s
+     /* transform: translateY(150px);  */
+     /* opacity: 0; */
+     /* transition:2s; */
+     /* transition: all 2s ease; */
+     /* animation-name: ptag;
+    animation-duration: 10s;*/
+  } 
+  
+  .heading.reveal.active{
+    transform: translateY(0px); 
+    /* opacity: 1;  */
+    animation-name: first-time;
+    animation-duration: 5s; 
+
+  }
+   p.reveal.active{
+     transform: translateY(0px); 
+     /* opacity: 1;  */
+    animation-name: ptag;
+    animation-duration: 8s;
+    backdrop-filter: blur(10px);
+   
+
+  } 
+
+.container{
+	scroll-snap-type: y mandatory;
+	overflow-y:scroll ;
+	height: 100vh;
+}
