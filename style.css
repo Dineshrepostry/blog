@@ -135,6 +135,7 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    scroll-snap-align: start;
 }
 p{
     /* animation-name: first-time;
@@ -201,14 +202,14 @@ p{
     transform: translateY(0px); 
     /* opacity: 1;  */
     animation-name: first-time;
-    animation-duration: 5s; 
+    animation-duration: 10s; 
 
   }
    p.reveal.active{
      transform: translateY(0px); 
      /* opacity: 1;  */
     animation-name: ptag;
-    animation-duration: 8s;
+    animation-duration: 12s;
   } 
   /* .foreground.reveal{
       transition:3s;
