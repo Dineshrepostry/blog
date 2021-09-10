@@ -597,3 +597,20 @@ p{
     font-size: 20px;
     font-family: Papyrus;
 }
+
+.load{
+      background: url("madras/cathedral.jpg") no-repeat -9999px -9999px;
+      background:url("intro.png") no-repeat -9999px -9999px; 
+      background: url("madras/ceg.png") no-repeat -9999px -9999px;
+      background: url("madras/pantheon-complex.jpg") no-repeat -9999px -9999px;
+      background: url("madras/u-f-m.jpg") no-repeat -9999px -9999px;
+      background: url("madras/high-court.jpg") no-repeat -9999px -9999px;
+      background: url("madras/central.jpg") no-repeat -9999px -9999px;
+      background: url("madras/public-hall1.jpg") no-repeat -9999px -9999px;
+      background: url("chennai/sec-mob.jpg") no-repeat -9999px -9999px;
+      background: url("chennai/lic.jpg") no-repeat -9999px -9999px;
+      background: url("chennai/valluvar-kottam-mobi.jfif") no-repeat -9999px -9999px;
+      background: url("chennai/ITC.jpg") no-repeat -9999px -9999px;
+      background: url("madras/pwd.jpg") no-repeat -9999px -9999px;
+      background: url("chennai/anna.jpg") no-repeat -9999px -9999px;
+}
