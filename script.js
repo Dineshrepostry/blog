@@ -6,6 +6,7 @@ var scroll = window.requestAnimationFrame ||
                 elementsToShow.forEach(function (element) {
                   if (isElementInViewport(element)) {
                     element.classList.add('active');
+                    
                   } else {
                     element.classList.remove('active');
                   }
@@ -21,11 +22,11 @@ var scroll = window.requestAnimationFrame ||
                 }
                 var rect = el.getBoundingClientRect();
                 return (
-                  (rect.top <= 0
-                    && rect.bottom >= 0)
+                  (rect.top < 0
+                    && rect.bottom > 0)
                   ||
-                  (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+                  (rect.bottom > (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.top < (window.innerHeight || document.documentElement.clientHeight))
                   ||
                   (rect.top >= 0 &&
                     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
