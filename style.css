@@ -15,10 +15,10 @@
 }
 @keyframes fore{
     0% {backdrop-filter: blur(0px);}
-    50% {backdrop-filter: blur(5px);}
-    80% {backdrop-filter: blur(10px);}
-    90% {backdrop-filter: blur(10px);}
-    100% {backdrop-filter: blur(10px);}
+    50% {backdrop-filter: blur(5px);filter: blur(5px);}
+    80% {backdrop-filter: blur(10px);filter: blur(10px);}
+    90% {backdrop-filter: blur(10px);filter: blur(10px);}
+    100% {backdrop-filter: blur(10px);filter: blur(10px);}
 }
 *{
     margin:0;
@@ -238,6 +238,7 @@ footer{
      animation-name: fore;
      animation-duration: 7s;
      backdrop-filter: blur(10px);
+     filter: blur(10px);
      /* transition:2s;  */
     }
 
@@ -463,6 +464,7 @@ p{
      animation-name: fore;
      animation-duration: 5s;
      backdrop-filter: blur(10px);
+     filter: blur(10px);
      /* transition:2s;  */
  }
 
