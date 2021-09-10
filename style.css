@@ -1,6 +1,6 @@
 @keyframes first-time{
     0% { opacity:0;position:relative;top:200px; }
-    50% {opacity:1;position:relative;top:200px; }
+    80% {opacity:1;position:relative;top:200px; }
     100%  { opacity: 1;
         position:relative;
         
@@ -15,7 +15,7 @@
 }
 @keyframes fore{
     0% {backdrop-filter: blur(0px);}
-    50% {backdrop-filter: blur(0px);}
+    50% {backdrop-filter: blur(5px);}
     80% {backdrop-filter: blur(10px);}
     90% {backdrop-filter: blur(10px);}
     100% {backdrop-filter: blur(10px);}
@@ -69,6 +69,7 @@ footer{
     transition:0.5s
 }
 .intro-text:hover{
+    cursor:pointer;
     color:black;
     font-weight: bold;
     transition:0.5s
@@ -80,10 +81,239 @@ footer{
     transition:0.5s
 }
 .intro-text1:hover{
+    cursor:pointer;
     color:red;
     font-weight: bolder;
     transition:0.5s
 }
+
+@media only screen and (max-width:480px) {
+    .cathedral,.foreground,.pantheon-complex,.university-of-madras, .pwd{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;   
+    }
+    .cathedral{
+    background-image: url("madras/cathedral.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    scroll-snap-align: start;
+    }
+
+    .ceg{
+    background-image: url("madras/ceg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+    }
+    .pantheon-complex{
+    background-image: url("madras/pantheon-complex.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+    }
+    .heading{
+    /* animation-name: first-time;
+    animation-duration: 5s; */
+    width:100vw;
+    text-align: center;
+    font-size: 20px;
+    font-family: Papyrus; 
+    /* font-family:sans-serif ;
+    font-weight: 900; */
+    }
+    .heading-pc{
+    width:100vw;
+    text-align: center;
+    font-size: 20px;
+    /* font-family: Papyrus; */
+    
+    }
+    .university-of-madras{
+    background-image: url("madras/u-f-m.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+    }
+    .high-court{
+    background-image: url("madras/high-court.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+    }
+    .central{
+        background-image: url("madras/central.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start;
+    }
+    .victoria-public-hall{
+        background-image: url("madras/public-hall1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start;
+    }
+
+    .secretriat{
+        background-image: url("chennai/sec-mob.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start; 
+    }
+    .LIC{
+        background-image: url("chennai/lic.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start; 
+    }
+    .valluvar-kottam{
+        background-image: url("chennai/valluvar-kottam-mobi.jfif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start; 
+    }
+    .ITC{
+        background-image: url("chennai/ITC.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start; 
+    }
+    p{
+    /* animation-name: first-time;
+    animation-duration: 10s; */
+    text-align: justify;
+    /* padding:5px; */
+    z-index: 2;
+    width:60%;
+    font-size: 15px;
+    font-weight: 700;
+    
+    }
+    .heading-u-f-m{
+   
+    text-shadow: 4px 4px black;    
+    width:100vw;
+    text-align: center;
+    font-size: 20px;
+    font-family: Papyrus;
+    }
+    .pwd{
+    background-image: url("madras/pwd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;  
+    }
+    .anna{
+        background-image: url("chennai/anna.jpg");
+        text-shadow: 4px 4px black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start;
+    }
+
+ .foreground.reveal{
+     margin: 0px;
+     padding:0px;
+    /* backdrop-filter: blur(0px); */
+    /* transition:1s */
+    }   
+ .foreground.reveal.active{
+     margin: 0px;
+     padding:0px;
+     animation-name: fore;
+     animation-duration: 7s;
+     backdrop-filter: blur(10px);
+     /* transition:2s;  */
+    }
+
+
+
+    .heading.reveal{
+        position: relative;
+        /* transform: translateY(150px);  */
+        /* opacity: 0; */
+        /* transition: all 2s ease; */
+        /* animation-name: first-time;
+        animation-duration: 5s; */
+    }
+  p.reveal{
+
+    position: relative;
+    transition:2s
+     /* transform: translateY(150px);  */
+     /* opacity: 0; */
+     /* transition:2s; */
+     /* transition: all 2s ease; */
+     /* animation-name: ptag;
+    animation-duration: 10s;*/
+  } 
+  
+  .heading.reveal.active{
+    transform: translateY(0px); 
+    /* opacity: 1;  */
+    animation-name: first-time;
+    animation-duration: 7s; 
+
+  }
+  .myimg.reveal{
+    position: relative;
+    /* transform: translateY(150px);  */
+      opacity: 0; 
+     /* transition:2s; */
+     /* transition: all 2s ease; */
+  }
+  .myimg.reveal.active{
+    transform: translateY(0px); 
+     opacity: 1;  
+    animation-name: first-time;
+    animation-duration: 2s; 
+
+  }
+   p.reveal.active{
+     transform: translateY(0px);
+     text-align: center; 
+     /* opacity: 1;  */
+    animation-name: ptag;
+    animation-duration: 12s;
+  } 
+  .about.reveal.active{
+    transform: translateY(0px); 
+    text-align: center;
+    /* opacity: 1;  */
+   animation-name: ptag;
+   animation-duration: 4s;
+ } 
+  /*.foreground.reveal{
+        transition:3s;
+    }
+        .foreground.reveal.active{
+        animation-name: fore;
+        animation-duration: 5s;
+    } */
+
+    .container{
+	    scroll-snap-type: y mandatory;
+	    overflow-y:scroll ;
+	    height: 100vh;
+    }
+}
+
+@media only screen and (min-width:481px) {
 .cathedral,.foreground,.pantheon-complex,.university-of-madras, .pwd{
     height: 100vh;
     display: flex;
@@ -131,12 +361,62 @@ footer{
     
 }
 .university-of-madras{
-    background-image: url("madras/u-f-m.jpg");
+    background-image: url("madras/university-of-madras.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     scroll-snap-align: start;
 }
+.high-court{
+    text-shadow: 2px 2px black;
+    background-image: url("madras/Chennai_High_Court.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+    }
+    .anna{
+        background-image: url("chennai/anna.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start;
+    }
+    .ITC{
+        background-image: url("chennai/ITC.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start; 
+    }
+    .central{
+        background-image: url("madras/central1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start;
+    }
+    .victoria-public-hall{
+        background-image: url("madras/public-hall.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start;
+    }
+    .valluvar-kottam{
+        background-image: url("chennai/valluvar-kottam.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start; 
+    }
+    .LIC{
+        background-image: url("chennai/lic.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        scroll-snap-align: start; 
+    }
 p{
     /* animation-name: first-time;
     animation-duration: 10s; */
@@ -163,12 +443,22 @@ p{
     background-position: center;
     scroll-snap-align: start;  
 }
+.secretriat{
+    background-image: url("chennai/secretriat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start; 
+}
+
  .foreground.reveal{
+     margin: 0px;
      padding:0px;
     /* backdrop-filter: blur(0px); */
     /* transition:1s */
 }
  .foreground.reveal.active{
+     margin: 0px;
      padding:0px;
      animation-name: fore;
      animation-duration: 5s;
@@ -207,10 +497,33 @@ p{
   }
    p.reveal.active{
      transform: translateY(0px); 
+     text-align: center;
      /* opacity: 1;  */
     animation-name: ptag;
     animation-duration: 12s;
   } 
+  .about.reveal.active{
+    transform: translateY(0px); 
+    text-align: center;
+    /* opacity: 1;  */
+   animation-name: ptag;
+   animation-duration: 4s;
+ } 
+
+  .myimg.reveal{
+    position: relative;
+    /* transform: translateY(150px);  */
+     /* opacity: 0; */
+     /* transition:2s; */
+     /* transition: all 2s ease; */
+  }
+  .myimg.reveal.active{
+    transform: translateY(0px); 
+    /* opacity: 1;  */
+    animation-name: first-time;
+    animation-duration: 2s; 
+
+  }
   /* .foreground.reveal{
       transition:3s;
   }
@@ -223,4 +536,64 @@ p{
 	scroll-snap-type: y mandatory;
 	overflow-y:scroll ;
 	height: 100vh;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    /*background: rgba(72,60,108,255);*/
+    background-color:black;
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+    border:1px solid red;
+    border-radius:10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .myimg{
+      width:20%;
+  }
+}
+.madras{
+    display:none;
+}
+.chennai{
+    display: none;
+}
+.aboutme{
+    height: 100vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;    
+    /* background-color:rgba(35,39,42,255); */
+    scroll-snap-align: start;
+}
+.aboutme>div{
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact{
+    text-align: center;
+    font-family: Papyrus;
+}
+.myimg{
+    border-radius: 50%;
+    /* border:1px solid white; */
+}
+.about{
+    font-size: 20px;
+    font-family: Papyrus;
 }
